@@ -1,10 +1,10 @@
 #!/usr/bin/python3
+"""checking function."""
 
 
 def is_same_class(obj, a_class):
-    """checks if two objects are EXACTLY the same class
-    -> doesn't care about inheritance
+    """Check for  an object is exactly an instance of a give
     """
-    if not isinstance(a_class, type):
-        raise TypeError("a_class must be of type 'type'")
-    return (type(obj) is a_class)
+    if type(obj) == a_class:
+        return True
+    return False
