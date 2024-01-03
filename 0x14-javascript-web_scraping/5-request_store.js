@@ -1,16 +1,4 @@
 #!/usr/bin/node
-/* 5. Fetch website and store body in file. */
-
-const request = require('request');
 const fs = require('fs');
-
-const args = process.argv.slice(2);
-const url = args[0];
-const path = args[1];
-
-request.get(url, (err, resp, body) => {
-  if (err) throw err;
-  fs.writeFile(path, body, 'utf8', (error) => {
-    if (error) throw error;
-  });
-});
+const request = require('request');
+request(process.argv[2]).pipe(fs.createWriteStream(process.argv[3]));
