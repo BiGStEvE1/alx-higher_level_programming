@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
+
+=======
+>>>>>>> c8868c7ef32226265df8ebd0bab14e65fed7c963
 """
 Module 2-rectangle
 Contains class Rectangle
